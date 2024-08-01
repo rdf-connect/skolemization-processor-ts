@@ -4,6 +4,9 @@ import rdf from "rdf-ext";
 import formatsPretty from "@rdfjs/formats/pretty.js";
 import Serializer from "@rdfjs/serializer-turtle";
 import { v4 as uuidv4 } from "uuid";
+import { getLoggerFor } from "./utils/logUtil";
+
+const logger = getLoggerFor("processor");
 
 /**
  * rdf-connect processor to map entities with blank node identifiers to equivalents with named node identifiers.
@@ -17,10 +20,11 @@ export function processor(
     outgoing: Writer<string>,
     mime = "text/turtle",
 ): void {
-    console.log("BN2NN Processor started.");
+    logger.debug("BN2NN Processor started.");
     // Initialize the data parser
     const parser = rdf.formats.parsers.get(mime);
     if (!parser) {
+        logger.error(`No parser found for MIME type ${mime}.`);
         throw new Error(`No parser found for MIME type ${mime}.`);
     }
 
@@ -48,6 +52,10 @@ export function processor(
 
             // Create a named node identifier.
             const namedNode = rdf.namedNode(`urn:bn2nn-id:${uuidv4()}`);
+
+            logger.debug(
+                `Mapping blank node ${blankNode.value} to named node ${namedNode.value}.`,
+            );
 
             // Find all quads with the blank node as subject and replace the subject with the named node.
             const quadsMatchingSubject = dataset.match(blankNode);
