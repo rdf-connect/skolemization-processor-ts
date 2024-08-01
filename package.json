@@ -1,6 +1,6 @@
 {
   "name": "@rdfc/blank-to-named-node-identifiers-processor-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "rdf-connect processor to map entities with blank node identifiers to equivalents with named node identifiers",
   "type": "module",
   "main": "lib/index.js",
