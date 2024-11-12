@@ -43,6 +43,6 @@
     "@rdfjs/serializer-turtle": "^1.1.4",
     "rdf-ext": "^2.5.2",
     "uuid": "^10.0.0",
-    "winston": "^3.16.0"
+    "winston": "^3.17.0"
   }
 }
