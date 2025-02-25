@@ -51,8 +51,12 @@ describe("processor", () => {
         expect(args[0].length).toBe(3);
 
         const [incoming, outgoing, mime] = args[0];
-        expect(incoming.ty.id).toBe("https://w3id.org/conn/js#JsReaderChannel");
-        expect(outgoing.ty.id).toBe("https://w3id.org/conn/js#JsWriterChannel");
+        expect(incoming.ty.value).toBe(
+            "https://w3id.org/conn/js#JsReaderChannel",
+        );
+        expect(outgoing.ty.value).toBe(
+            "https://w3id.org/conn/js#JsWriterChannel",
+        );
         expect(mime).toBe("text/turtle");
     });
 });
