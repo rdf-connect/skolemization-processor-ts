@@ -42,7 +42,7 @@
   "dependencies": {
     "@rdfjs/serializer-turtle": "^1.1.5",
     "rdf-ext": "^2.6.0",
-    "uuid": "^11.1.0",
+    "uuid": "^12.0.0",
     "winston": "^3.17.0"
   }
 }
