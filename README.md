@@ -4,7 +4,7 @@
 
 Install
 ```bash
-npm install @rdfc/skolemize-processor-ts
+npm install @rdfc/skolemization-processor-ts
 ```
 
 Pipeline
