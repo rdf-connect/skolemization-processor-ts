@@ -1,4 +1,4 @@
-# Skolemize Processor
+# Skolemization Processor
 
 [![Build and tests with Node.js](https://github.com/rdf-connect/blank-to-named-node-identifiers-processor-ts/actions/workflows/build-test.yml/badge.svg)](https://github.com/rdf-connect/blank-to-named-node-identifiers-processor-ts/actions/workflows/build-test.yml)
 
