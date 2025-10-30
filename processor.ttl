@@ -6,7 +6,7 @@
 
 rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
   rdfc:jsImplementationOf rdfc:Processor;
-  rdfs:label "Skolemize Processor";
+  rdfs:label "Skolemization Processor";
   rdfs:comment "A processor that converts a RDF data to a skolemized form (removing blank nodes).";
   rdfc:file <./lib/index.js>;
   rdfc:class "SkolemizationProcessor";
