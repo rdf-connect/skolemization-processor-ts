@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rdf-connect/blank-to-named-node-identifiers-processor-ts"
+    "url": "https://github.com/rdf-connect/skolemization-processor-ts"
   },
   "author": "Ieben Smessaert",
   "license": "MIT",

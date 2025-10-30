@@ -4,9 +4,6 @@ import rdf from "rdf-ext";
 import formatsPretty from "@rdfjs/formats/pretty.js";
 import Serializer from "@rdfjs/serializer-turtle";
 import { v4 as uuidv4 } from "uuid";
-import { getLoggerFor } from "./utils/logUtil";
-
-const logger = getLoggerFor("processor");
 
 /**
  * rdf-connect processor to map entities with blank node identifiers to equivalents with named node identifiers.
@@ -28,7 +25,7 @@ export class SkolemizationProcessor extends Processor<Args> {
 
         const parser = rdf.formats.parsers.get(this.mime);
         if (!parser) {
-            logger.error(`No parser found for MIME type ${this.mime}.`);
+            this.logger.error(`No parser found for MIME type ${this.mime}.`);
             throw new Error(`No parser found for MIME type ${this.mime}.`);
         } else {
             this.parser = parser;
@@ -57,7 +54,7 @@ export class SkolemizationProcessor extends Processor<Args> {
                 // Create a named node identifier.
                 const namedNode = rdf.namedNode(`urn:skol-id:${uuidv4()}`);
 
-                logger.debug(
+                this.logger.debug(
                     `Mapping blank node ${blankNode.value} to named node ${namedNode.value}.`,
                 );
 
