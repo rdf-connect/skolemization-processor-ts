@@ -13,7 +13,7 @@ Pipeline
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 ### Import the processor definitions
-<> owl:imports <./node_modules/@rdfc/skolemize-processor-ts/processor.ttl>.
+<> owl:imports <./node_modules/@rdfc/skolemization-processor-ts/processor.ttl>.
 
 ### Define the channels your processor needs
 <in> a rdfc:Reader, rdfc:Writer.
