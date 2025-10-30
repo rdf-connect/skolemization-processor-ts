@@ -1,6 +1,6 @@
 import { expect, test, describe } from "vitest";
 import { ProcHelper } from "@rdfc/js-runner/lib/testUtils";
-import { SkolemiseProcessor } from "../src/";
+import { SkolemizeProcessor } from "../src/";
 import { resolve } from "path";
 
 const pipeline = `
@@ -9,7 +9,7 @@ const pipeline = `
         <incoming> a rdfc:Reader.
         <outgoing> a rdfc:Writer.
 
-        <http://example.org/proc> a rdfc:Skolemise;
+        <http://example.org/proc> a rdfc:Skolemize;
             rdfc:incoming <incoming>;
             rdfc:outgoing <outgoing>;
             rdfc:mime "text/turtle".
@@ -17,14 +17,14 @@ const pipeline = `
 
 describe("processor", () => {
     test("transform input", async () => {
-        const helper = new ProcHelper<SkolemiseProcessor>();
+        const helper = new ProcHelper<SkolemizeProcessor>();
         await helper.importFile(resolve("./processor.ttl"));
         await helper.importInline(resolve("./pipeline.ttl"), pipeline);
 
-        const config = helper.getConfig("Skolemise");
+        const config = helper.getConfig("Skolemize");
         expect(config.location).toBeDefined();
         expect(config.file).toBeDefined();
-        expect(config.clazz).toBe("SkolemiseProcessor");
+        expect(config.clazz).toBe("SkolemizeProcessor");
         // Parse pipeline into processors.
 
         const proc = await helper.getProcessor("http://example.org/proc");

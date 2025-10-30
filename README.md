@@ -1,10 +1,10 @@
-# Skolemise Processor
+# Skolemize Processor
 
 [![Build and tests with Node.js](https://github.com/rdf-connect/blank-to-named-node-identifiers-processor-ts/actions/workflows/build-test.yml/badge.svg)](https://github.com/rdf-connect/blank-to-named-node-identifiers-processor-ts/actions/workflows/build-test.yml)
 
 Install
 ```bash
-npm install @rdfc/skolemise-processor-ts
+npm install @rdfc/skolemize-processor-ts
 ```
 
 Pipeline
@@ -13,17 +13,17 @@ Pipeline
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 ### Import the processor definitions
-<> owl:imports <./node_modules/@rdfc/skolemise-processor-ts/processor.ttl>.
+<> owl:imports <./node_modules/@rdfc/skolemize-processor-ts/processor.ttl>.
 
 ### Define the channels your processor needs
 <in> a rdfc:Reader, rdfc:Writer.
 <out> a rdfc:Reader, rdfc:Writer.
 
 ### Attach the processor to the pipeline under the NodeRunner
-# Add the `rdfc:processor <skolemise>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
+# Add the `rdfc:processor <skolemize>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
 
 ### Define and configure the processors
-<skolemise> a rdfc:Skolemise;
+<skolemize> a rdfc:Skolemize;
     rdfc:incoming <in>;
     rdfc:outgoing <out>;
     rdfc:meme "text/turtle".

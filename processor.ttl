@@ -4,14 +4,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 
-rdfc:Skolemise a owl:Class, rdfs:Class;
+rdfc:Skolemize a owl:Class, rdfs:Class;
   rdfc:jsImplementationOf rdfc:Processor;
   rdfc:file <./lib/index.js>;
-  rdfc:class "SkolemiseProcessor";
+  rdfc:class "SkolemizeProcessor";
   rdfc:entrypoint <./>.
 
 [ ] a sh:NodeShape;
-  sh:targetClass rdfc:Skolemise;
+  sh:targetClass rdfc:Skolemize;
   sh:property [
     sh:class rdfc:Reader;
     sh:path rdfc:incoming;
