@@ -55,7 +55,7 @@ export class SkolemizationProcessor extends Processor<Args> {
                 const blankNode = quad.subject;
 
                 // Create a named node identifier.
-                const namedNode = rdf.namedNode(`urn:bn2nn-id:${uuidv4()}`);
+                const namedNode = rdf.namedNode(`urn:skol-id:${uuidv4()}`);
 
                 logger.debug(
                     `Mapping blank node ${blankNode.value} to named node ${namedNode.value}.`,
