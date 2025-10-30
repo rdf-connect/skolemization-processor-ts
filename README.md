@@ -23,7 +23,7 @@ Pipeline
 # Add the `rdfc:processor <skolemize>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
 
 ### Define and configure the processors
-<skolemize> a rdfc:Skolemize;
+<skolemizer> a rdfc:SkolemizationProcessor;
     rdfc:incoming <in>;
     rdfc:outgoing <out>;
     rdfc:meme "text/turtle".
