@@ -1,7 +1,7 @@
 {
-  "name": "@rdfc/blank-to-named-node-identifiers-processor-ts",
-  "version": "1.0.1",
-  "description": "rdf-connect processor to map entities with blank node identifiers to equivalents with named node identifiers",
+  "name": "@rdfc/skolemization-processor-ts",
+  "version": "1.0.0",
+  "description": "RDF-Connect processor to map entities with blank node identifiers to equivalents with named node identifiers",
   "type": "module",
   "main": "lib/index.js",
   "files": [
@@ -20,7 +20,6 @@
   "author": "Ieben Smessaert",
   "license": "MIT",
   "devDependencies": {
-    "@rdfc/js-runner": "^1.0.0",
     "@rdfjs/types": "^2.0.1",
     "@types/rdf-ext": "^2.5.2",
     "@types/uuid": "^10.0.0",
@@ -40,6 +39,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@rdfc/js-runner": "^3.0.1",
     "@rdfjs/serializer-turtle": "^1.1.5",
     "rdf-ext": "^2.6.0",
     "uuid": "^11.1.0",
