@@ -20,7 +20,7 @@ Pipeline
 <out> a rdfc:Reader, rdfc:Writer.
 
 ### Attach the processor to the pipeline under the NodeRunner
-# Add the `rdfc:processor <skolemize>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
+# Add the `rdfc:processor <skolemizer>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
 
 ### Define and configure the processors
 <skolemizer> a rdfc:SkolemizationProcessor;
