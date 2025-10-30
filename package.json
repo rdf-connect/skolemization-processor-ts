@@ -1,5 +1,5 @@
 {
-  "name": "@rdfc/skolemize-processor-ts",
+  "name": "@rdfc/skolemization-processor-ts",
   "version": "1.0.0",
   "description": "RDF-Connect processor to map entities with blank node identifiers to equivalents with named node identifiers",
   "type": "module",
