@@ -4,14 +4,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 
-rdfc:Skolemize a owl:Class, rdfs:Class;
+rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
   rdfc:jsImplementationOf rdfc:Processor;
+  rdfs:label "Skolemize Processor";
+  rdfs:comment "A processor that converts a RDF data to a skolemized form (removing blank nodes).";
   rdfc:file <./lib/index.js>;
-  rdfc:class "SkolemizeProcessor";
+  rdfc:class "SkolemizationProcessor";
   rdfc:entrypoint <./>.
 
 [ ] a sh:NodeShape;
-  sh:targetClass rdfc:Skolemize;
+  sh:targetClass rdfc:SkolemizationProcessor;
   sh:property [
     sh:class rdfc:Reader;
     sh:path rdfc:incoming;

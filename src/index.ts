@@ -20,7 +20,7 @@ export type Args = {
     outgoing: Writer;
     mime: string;
 };
-export class SkolemizeProcessor extends Processor<Args> {
+export class SkolemizationProcessor extends Processor<Args> {
     parser: NonNullable<ReturnType<typeof rdf.formats.parsers.get>>;
     serializer: Serializer = new Serializer();
     async init(this: Args & this): Promise<void> {
