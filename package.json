@@ -23,9 +23,9 @@
     "@rdfjs/types": "^2.0.1",
     "@types/rdf-ext": "^2.5.2",
     "@types/uuid": "^11.0.0",
-    "@typescript-eslint/eslint-plugin": "^8.46.4",
-    "@typescript-eslint/parser": "^8.46.4",
-    "@vitest/coverage-v8": "^4.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "@vitest/coverage-v8": "^4.0.10",
     "dotenv": "^17.2.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^10.1.8",
@@ -36,7 +36,7 @@
     "tsc-alias": "^1.8.16",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.9"
+    "vitest": "^4.0.10"
   },
   "dependencies": {
     "@rdfc/js-runner": "^3.0.1",
