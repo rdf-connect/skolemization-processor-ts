@@ -26,7 +26,7 @@
     "@typescript-eslint/eslint-plugin": "^8.54.0",
     "@typescript-eslint/parser": "^8.54.0",
     "@vitest/coverage-v8": "^4.0.18",
-    "dotenv": "^17.2.4",
+    "dotenv": "^17.2.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
@@ -39,7 +39,7 @@
     "vitest": "^4.0.18"
   },
   "dependencies": {
-    "@rdfc/js-runner": "^3.0.2",
+    "@rdfc/js-runner": "^3.0.1",
     "@rdfjs/serializer-turtle": "^1.1.5",
     "rdf-ext": "^2.6.0",
     "uuid": "^13.0.0",
