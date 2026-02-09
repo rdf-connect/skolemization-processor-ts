@@ -29,7 +29,7 @@ rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
   ], [
     sh:datatype xsd:string;
     sh:path rdfc:mime;
-    sh:name "mime";
+    sh:name "MIME type";
     sh:maxCount 1;
   ].
 
