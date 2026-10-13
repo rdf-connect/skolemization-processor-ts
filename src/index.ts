@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from "uuid";
  *
  * @param incoming The data stream which must be transformed.
  * @param outgoing The data stream into which the resulting stream is written.
- * @param mime The MIME type of the data stream.
+ * @param mime The MIME type of the data stream (defaults to "text/turtle" via the processor shape).
  */
 export type Args = {
     incoming: Reader;
@@ -21,8 +21,6 @@ export class SkolemizationProcessor extends Processor<Args> {
     parser: NonNullable<ReturnType<typeof rdf.formats.parsers.get>>;
     serializer: Serializer = new Serializer();
     async init(this: Args & this): Promise<void> {
-        this.mime = this.mime ?? "text/turtle";
-
         const parser = rdf.formats.parsers.get(this.mime);
         if (!parser) {
             this.logger.error(`No parser found for MIME type ${this.mime}.`);
