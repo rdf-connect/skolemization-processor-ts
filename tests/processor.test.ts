@@ -32,4 +32,25 @@ describe("processor", () => {
         expect(proc.outgoing.constructor.name).toBe("WriterInstance");
         expect(proc.mime).toBe("text/turtle");
     });
+
+    test("falls back to its default values", async () => {
+        const minimalPipeline = `
+        @prefix rdfc: <https://w3id.org/rdf-connect#>.
+
+        <incoming> a rdfc:Reader.
+        <outgoing> a rdfc:Writer.
+
+        <http://example.org/proc> a rdfc:SkolemizationProcessor;
+            rdfc:incoming <incoming>;
+            rdfc:outgoing <outgoing>.
+    `;
+
+        const helper = new ProcHelper<SkolemizationProcessor>();
+        await helper.importFile(resolve("./processor.ttl"));
+        await helper.importInline(resolve("./pipeline.ttl"), minimalPipeline);
+        helper.getConfig("SkolemizationProcessor");
+
+        const proc = await helper.getProcessor("http://example.org/proc");
+        expect(proc.mime).toBe("text/turtle");
+    });
 });
