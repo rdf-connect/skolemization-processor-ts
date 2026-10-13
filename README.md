@@ -26,7 +26,7 @@ Pipeline
 <skolemizer> a rdfc:SkolemizationProcessor;
     rdfc:incoming <in>;
     rdfc:outgoing <out>;
-    rdfc:meme "text/turtle".
+    rdfc:mime "text/turtle".
 ```
 
 This repository contains a RDF-Connect processor to map entities with blank node identifiers to equivalents with named
