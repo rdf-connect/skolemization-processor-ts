@@ -1,10 +1,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdfc: <https://w3id.org/rdf-connect#>.
+@prefix rdfcp: <https://w3id.org/rdf-connect/processors#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 
-rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
+rdfcp:SkolemizationProcessor a owl:Class, rdfs:Class;
   rdfc:jsImplementationOf rdfc:Processor;
   rdfs:label "Skolemization Processor";
   rdfs:comment "A processor that converts a RDF data to a skolemized form (removing blank nodes).";
@@ -13,10 +14,10 @@ rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
   rdfc:entrypoint <./>.
 
 [ ] a sh:NodeShape;
-  sh:targetClass rdfc:SkolemizationProcessor;
+  sh:targetClass rdfcp:SkolemizationProcessor;
   sh:property [
     sh:class rdfc:Reader;
-    sh:path rdfc:incoming;
+    sh:path rdfcp:incoming;
     sh:codeIdentifier "incoming";
     sh:name "Input channel";
     sh:description "Input channel with the RDF data to skolemize.";
@@ -24,7 +25,7 @@ rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
     sh:minCount 1;
   ], [
     sh:class rdfc:Writer;
-    sh:path rdfc:outgoing;
+    sh:path rdfcp:outgoing;
     sh:codeIdentifier "outgoing";
     sh:name "Output channel";
     sh:description "Output channel to which the RDF data is written as Turtle, with its blank nodes replaced by named nodes.";
@@ -32,7 +33,7 @@ rdfc:SkolemizationProcessor a owl:Class, rdfs:Class;
     sh:minCount 1;
   ], [
     sh:datatype xsd:string;
-    sh:path rdfc:mime;
+    sh:path rdfcp:mime;
     sh:codeIdentifier "mime";
     sh:name "MIME type";
     sh:description "MIME type of the incoming RDF data, e.g. text/turtle or application/n-triples; default is text/turtle.";
