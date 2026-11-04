@@ -11,8 +11,8 @@ const pipeline = `
         <outgoing> a rdfc:Writer.
 
         <http://example.org/proc> a rdfcp:SkolemizationProcessor;
-            rdfcp:incoming <incoming>;
-            rdfcp:outgoing <outgoing>;
+            rdfcp:input <incoming>;
+            rdfcp:output <outgoing>;
             rdfcp:mime "text/turtle".
     `;
 
@@ -43,8 +43,8 @@ describe("processor", () => {
         <outgoing> a rdfc:Writer.
 
         <http://example.org/proc> a rdfcp:SkolemizationProcessor;
-            rdfcp:incoming <incoming>;
-            rdfcp:outgoing <outgoing>.
+            rdfcp:input <incoming>;
+            rdfcp:output <outgoing>.
     `;
 
         const helper = new ProcHelper<SkolemizationProcessor>();
