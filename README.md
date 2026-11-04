@@ -25,8 +25,8 @@ Pipeline
 
 ### Define and configure the processors
 <skolemizer> a rdfcp:SkolemizationProcessor;
-    rdfcp:incoming <in>;
-    rdfcp:outgoing <out>;
+    rdfcp:input <in>;
+    rdfcp:output <out>;
     rdfcp:mime "text/turtle".
 ```
 
