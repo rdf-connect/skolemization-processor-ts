@@ -10,6 +10,7 @@ npm install @rdfc/skolemization-processor-ts
 Pipeline
 ```turtle
 @prefix rdfc: <https://w3id.org/rdf-connect#>.
+@prefix rdfcp: <https://w3id.org/rdf-connect/processors#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 ### Import the processor definitions
@@ -23,10 +24,10 @@ Pipeline
 # Add the `rdfc:processor <skolemizer>` statement under the `rdfc:consistsOf` statement of the `rdfc:NodeRunner`
 
 ### Define and configure the processors
-<skolemizer> a rdfc:SkolemizationProcessor;
-    rdfc:incoming <in>;
-    rdfc:outgoing <out>;
-    rdfc:mime "text/turtle".
+<skolemizer> a rdfcp:SkolemizationProcessor;
+    rdfcp:incoming <in>;
+    rdfcp:outgoing <out>;
+    rdfcp:mime "text/turtle".
 ```
 
 This repository contains a RDF-Connect processor to map entities with blank node identifiers to equivalents with named

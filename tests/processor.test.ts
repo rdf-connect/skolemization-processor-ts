@@ -5,14 +5,15 @@ import { resolve } from "path";
 
 const pipeline = `
         @prefix rdfc: <https://w3id.org/rdf-connect#>.
+        @prefix rdfcp: <https://w3id.org/rdf-connect/processors#>.
 
         <incoming> a rdfc:Reader.
         <outgoing> a rdfc:Writer.
 
-        <http://example.org/proc> a rdfc:SkolemizationProcessor;
-            rdfc:incoming <incoming>;
-            rdfc:outgoing <outgoing>;
-            rdfc:mime "text/turtle".
+        <http://example.org/proc> a rdfcp:SkolemizationProcessor;
+            rdfcp:incoming <incoming>;
+            rdfcp:outgoing <outgoing>;
+            rdfcp:mime "text/turtle".
     `;
 
 describe("processor", () => {
@@ -36,13 +37,14 @@ describe("processor", () => {
     test("falls back to its default values", async () => {
         const minimalPipeline = `
         @prefix rdfc: <https://w3id.org/rdf-connect#>.
+        @prefix rdfcp: <https://w3id.org/rdf-connect/processors#>.
 
         <incoming> a rdfc:Reader.
         <outgoing> a rdfc:Writer.
 
-        <http://example.org/proc> a rdfc:SkolemizationProcessor;
-            rdfc:incoming <incoming>;
-            rdfc:outgoing <outgoing>.
+        <http://example.org/proc> a rdfcp:SkolemizationProcessor;
+            rdfcp:incoming <incoming>;
+            rdfcp:outgoing <outgoing>.
     `;
 
         const helper = new ProcHelper<SkolemizationProcessor>();
