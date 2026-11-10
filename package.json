@@ -26,7 +26,7 @@
     "@types/uuid": "^11.0.0",
     "@typescript-eslint/eslint-plugin": "^8.72.1",
     "@typescript-eslint/parser": "^8.72.1",
-    "@vitest/coverage-v8": "^4.1.12",
+    "@vitest/coverage-v8": "^5.1.0",
     "dotenv": "^18.0.10",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^10.1.8",
@@ -37,7 +37,7 @@
     "tsc-alias": "^1.9.10",
     "typescript": "^6.0.3",
     "vite-tsconfig-paths": "^6.1.1",
-    "vitest": "^4.1.12"
+    "vitest": "^5.1.0"
   },
   "dependencies": {
     "@rdfjs/serializer-turtle": "^1.1.6",
